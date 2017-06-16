@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>Test - krug kretanje</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("#button").click(function(){
+				$("#krug").css({"-webkit-animation": "krugrotate 7s infinite forwards"});
+				
+			});
+
+		});
+
+	</script>
+	<style type="text/css">
+
+		@-webkit-keyframes krugrotate{
+
+			from {
+				-webkit-transform:rotate(0deg);
+				left:-500px;	}
+		
+			to {-webkit-transform:rotate(270deg);
+				left:290px;
+			}
+
+		}
+		#button {
+			background-color: gray;
+		}
+		#kocka {
+
+			border-bottom: 2px solid black;
+			width: 100%;
+			height: 60%;
+			position: absolute;
+			margin-left:auto;
+			margin-right: auto;
+			top: 200px;
+			
+
+		}
+		#krug {
+			-webkit-animation-fill-mode: forwards; 
+			position: relative;
+			height: 360px;
+			width: 360px;
+			border-radius: 400px;
+			border:15px dashed #49565C;
+			left: -500px;
+		}
+
+	</style>
+	<div id="kocka">
+		<div id="krug">
+
+		</div>
+	<div id="button">Click me</div>
+
+
+	</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<title>test - border</title>
+	<style>
+		#glavno {
+			width: 160px;
+			height: 54px;
+			margin: 130px;
+			overflow: hidden;
+			background-color: #424242;
+			position: absolute;
+			z-index: 0;
+		}	
+
+		#glavno p {
+			margin: 0px;
+			border: 2px solid whitesmoke;
+			height: 34px;
+			width: 156px;
+			z-index: -1;
+			float: left;
+			text-align: center;
+			padding-top: 10%;
+			color: white;
+			position: relative;
+
+			
+		}
+
+		#glh {
+			height: 2px;
+			background-color: red;
+			width: 80px;
+			position: relative;
+			z-index:999;
+			
+
+		}
+		#gdh {
+			height: 2px;
+			background-color: red;
+			width: 80px;
+			position: relative;
+			z-index:999;
+			float: right;
+			top:-54px;
+
+		}
+		#ddh {
+			height: 2px;
+			background-color: red;
+			width: 80px;
+			position: relative;
+			z-index:999;
+			float: right;
+			top:-28px;
+
+		}
+		#dlh {
+			height: 2px;
+			background-color: red;
+			width: 80px;
+			position: relative;
+			z-index:999;
+			
+			top: 24px;
+
+		}
+
+		#glv {
+			height: 26px;
+			width: 2px;
+			background-color: red;
+			position: relative;
+			z-index:999;
+
+		}
+		#gdv {
+			height: 26px;
+			width: 2px;
+			background-color: red;
+			position: relative;
+			z-index:999;
+			float: right;
+			top: -52px;
+			left: 80px;
+
+		}
+		#dlv {
+			height: 26px;
+			width: 2px;
+			background-color: red;
+			position: relative;
+			z-index:999;
+			top:-2px;
+			
+
+
+		}
+		#ddv {
+			height: 26px;
+			width: 2px;
+			background-color: red;
+			position: relative;
+			z-index:999;
+			float: right;
+			top: -52px;
+			left:80px;
+
+		}
+		#button {
+			margin-left: 40px;
+			background-color: gray;
+			color: white;
+			width: 130px;
+			text-align: center;
+
+		}
+		#button:hover {
+			
+			background-color: white;
+			color: gray;
+			cursor: pointer;
+			
+		}
+		#glavno:hover {
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+		<div id="glavno">
+			
+			<p id="ok">OK</p>
+			<div id="glh"></div>
+			<div id="glv"></div>
+			<div id="gdh"></div>
+			<div id="gdv"></div>
+			<div id="dlh"></div>
+			<div id="dlv"></div>
+			<div id="ddh"></div>
+			<div id="ddv"></div>
+			
+		</div>
+		<div id="button">
+			klikni
+		</div>
+		<script>
+			$(document).ready(function(){
+			var button = $("#ok");
+			var glv = $("#glv");
+			var glh = $("#glh");
+			var gdv = $("#gdv");
+			var gdh = $("#gdh");
+			var dlv = $("#dlv");
+			var dlh = $("#dlh");
+			var ddh = $("#ddh");
+			var ddv = $("#ddv");
+
+
+
+			button.mouseenter(function(){
+
+				glh.animate({left:"-60px"});
+				gdh.animate({left:"60px"});
+				dlh.animate({left:"-60px"});
+				ddh.animate({left:"60px"});
+				glv.animate({top:"-14px"});
+				gdv.animate({top:"-66px"});
+				dlv.animate({top:"12px"});
+				ddv.animate({top:"-38px"});
+			});
+			button.mouseout(function(){
+
+				glh.animate({left:"0px"});
+				gdh.animate({left:"0px"});
+				dlh.animate({left:"0px"});
+				ddh.animate({left:"0px"});
+				glv.animate({top:"0px"});
+				gdv.animate({top:"-52px"});
+				dlv.animate({top:"-2px"});
+				ddv.animate({top:"-52px"});
+			});
+		});
+
+
+		</script>
+
+
+</body>
+</html>
